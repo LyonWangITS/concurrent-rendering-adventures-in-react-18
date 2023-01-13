@@ -5,7 +5,7 @@ import { UserDetails } from './UserDetails';
 
 export function UserList() {
   const [selectedUser, setSelectedUser] = useState<Account | null>(null);
-  const { data, error } = useSWR<Account[], Error>(
+  const { data } = useSWR<Account[], Error>(
     `${process.env.REACT_APP_API_BASE}/accounts`
   );
   return (
